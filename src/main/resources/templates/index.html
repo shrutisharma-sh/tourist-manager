@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Tourist List</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>Tourist List</h1>
+<table border="1">
+    <tr>
+        <th>ID</th><th>Name</th><th>Email</th><th>Destination</th>
+    </tr>
+    <tr th:each="tourist : ${tourists}">
+        <td th:text="${tourist.id}"></td>
+        <td th:text="${tourist.name}"></td>
+        <td th:text="${tourist.email}"></td>
+        <td th:text="${tourist.place}"></td>
+    </tr>
+</table>
+<br>
+<a href="/add"><button>Add Tourist</button></a>
+</body>
+</html>
