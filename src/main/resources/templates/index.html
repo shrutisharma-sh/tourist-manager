@@ -16,6 +16,11 @@
         <td th:text="${tourist.name}"></td>
         <td th:text="${tourist.email}"></td>
         <td th:text="${tourist.place}"></td>
+        <td>
+            <a th:href="@{'/update/' + ${tourist.id}}" class="btn btn-primary btn-sm">Update</a>
+            <a th:href="@{'/delete/' + ${tourist.id}}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this tourist?');">Delete</a>
+        </td>
+
     </tr>
 </table>
 <br>

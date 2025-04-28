@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourist Manager - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .hero {
+            position: relative;
+            background: url('/images/beach.jpg') center/cover no-repeat;
+            height: 90vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Tourist Manager</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/destination}"><i class="bi bi-geo-alt-fill"></i> Destination</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/about}"><i class="bi bi-info-circle-fill"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/login}"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-light mx-2" th:href="@{/tourists}"><i class="bi bi-people-fill"></i> Show Tourists</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-success" th:href="@{/add}"><i class="bi bi-person-plus-fill"></i> Add Tourist</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1 class="display-4 fw-bold">Wonderful Tours Await</h1>
+        <p class="lead">Unlock the secrets of amazing destinations!</p>
+        <a href="#" class="btn btn-primary btn-lg mt-3">Explore Now</a>
+    </div>
+</section>
+
+<!-- Bootstrap Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
